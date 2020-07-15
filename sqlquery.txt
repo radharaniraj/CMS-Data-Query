@@ -1,3 +1,9 @@
+Note: 
+I have Renamed the following files:
+OP_DTL_GNRL_PGYR2019_P06302020.csv AS gnrl
+OP_DTL_OWNRSHP_PGYR2019_P06302020 AS ownrship
+OP_DTL_RSRCH_PGYR2019_P06302020 AS reserc
+
 Payments By Type:
 
 
