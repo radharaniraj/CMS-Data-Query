@@ -1,0 +1,44 @@
+Payments By Type:
+
+
+General Payments:
+
+    Amount:SELECT SUM(Total_Amount_of_Payment_USDollars)  FROM gnrl;   ->3563596867
+    Payments:SELECT COUNT(*) FROM gnrl;     ->10367307
+    Disputed Amount:SELECT SUM(Total_Amount_of_Payment_USDollars) FROM gnrl WHERE Dispute_Status_for_Publication="Yes";    ->722739.6
+    Disputed Payments:SELECT COUNT(*) FROM gnrl WHERE Dispute_Status_for_Publication="Yes";    ->292
+
+Research Payments:
+
+    Amount: SELECT SUM(Total_Amount_of_Payment_USDollars) FROM reserc;   ->5228656739
+    Payment:SELECT COUNT(*) FROM reserc;  ->613579
+    Disputed amount:  SELECT SUM(Total_Amount_of_Payment_USDollars) FROM reserc WHERE Dispute_Status_for_Publication="Yes";   ->973557.86
+    Disputed payment: SELECT COUNT(*) FROM reserc WHERE Dispute_Status_for_Publication="Yes";  ->122
+
+Ownership Payments:
+
+    Amount: SELECT SUM(Value_of_Interest) from ownrship;  ->1240046612
+    Payments:SELECT COUNT(*) from ownrship;  -> 2554   
+    Disputed amount: SELECT Sum(Value_of_Interest) from ownrship WHERE Dispute_Status_for_Publication="Yes";  -> 32950
+    Disputed Payments :SELECT COUNT(*) from ownrship WHERE Dispute_Status_for_Publication="Yes";   ->1
+
+Payments By Entities:
+
+
+General Payments:
+
+    Physician Amount:  SELECT SUM(Total_Amount_of_Payment_USDollars) from gnrl WHERE Physician_Profile_ID NOT LIKE '';  -> 2297477112
+    Teaching Hospital Amount: SELECT SUM(Total_Amount_of_Payment_USDollars) from gnrl WHERE Physician_Profile_ID  LIKE '';  -> 1266119755
+    Companies Amount:SELECT SUM(Total_Amount_of_Payment_USDollars)  FROM gnrl;   ->3563596867
+
+Research payment:
+
+    Physician Amount:SELECT SUM(Total_Amount_of_Payment_USDollars) from reserc WHERE Physician_Profile_ID NOT LIKE '';  ->71519076 
+    Teaching Hospital Amount:SELECT SUM(Total_Amount_of_Payment_USDollars) from reserc WHERE Physician_Profile_ID LIKE '';  ->5157137662
+    Companies Amount:SELECT SUM(Total_Amount_of_Payment_USDollars) FROM reserc;   ->5228656739
+
+Value of Ownership or Investment Interest:
+
+    Physician Amount:SELECT SUM(Value_of_Interest) from ownrship WHERE Physician_Profile_ID NOT LIKE '';  ->1240046612
+    Teaching Hospital Amount:SELECT SUM(Value_of_Interest) from ownrship WHERE Physician_Profile_ID LIKE '';  ->Null
+    Companies Amount: SELECT SUM(Value_of_Interest) from ownrship;  ->1240046612
