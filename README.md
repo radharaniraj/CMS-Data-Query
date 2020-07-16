@@ -51,8 +51,7 @@ You can download the database by following this [link](https://download.cms.gov/
 #### Companies
  | Payments        | Given Value (Mentioned on website)           | Calculated Value  |
 | ------------- |:-------------:| -----:|
-| Number of Entities Receiving Payments     |1602 |2341
-  |
+| Number of Entities Receiving Payments     |1602 |2341|
 |  General Payments Amounts     | $3.56 Billion     |  3563596867 |
 | Research Payments Amounts | $5.23 Billion      |    5157137662 |
 | Value of Ownership or Investment Interest| $1.24 Billion |    1240046612     |
