@@ -50,14 +50,14 @@ Number of Entities:
 
 General Payments:
 
-    Physician Amount:  SELECT SUM(Total_Amount_of_Payment_USDollars) from gnrl WHERE Physician_Profile_ID NOT LIKE '';  -> 2297477112
-    Teaching Hospital Amount: SELECT SUM(Total_Amount_of_Payment_USDollars) from gnrl WHERE Physician_Profile_ID  LIKE '';  -> 1266119755
+    Physician Amount:  SELECT SUM(Total_Amount_of_Payment_USDollars) from gnrl WHERE WHERE Covered_Recipient_Type = 'Covered Recipient Physician' ;  -> 2297477112
+    Teaching Hospital Amount: SELECT SUM(Total_Amount_of_Payment_USDollars) from gnrl WHERE Covered_Recipient_Type = 'Covered Recipient Teaching Hospital';  -> 1266119755
     Companies Amount:SELECT SUM(Total_Amount_of_Payment_USDollars)  FROM gnrl;   ->3563596867
 
 Research payment:
 
-    Physician Amount:SELECT SUM(Total_Amount_of_Payment_USDollars) from reserc WHERE Physician_Profile_ID NOT LIKE '';  ->71519076 
-    Teaching Hospital Amount:SELECT SUM(Total_Amount_of_Payment_USDollars) from reserc WHERE Physician_Profile_ID LIKE '';  ->5157137662
+    Physician Amount:SELECT SUM(Total_Amount_of_Payment_USDollars) from reserc WHERE Covered_Recipient_Type = 'Covered Recipient Physician';  ->71519076 
+    Teaching Hospital Amount:SELECT SUM(Total_Amount_of_Payment_USDollars) from reserc WHERE Covered_Recipient_Type = 'Covered Recipient Teaching Hospital';  ->1378890812
     Companies Amount:SELECT SUM(Total_Amount_of_Payment_USDollars) FROM reserc;   ->5228656739
 
 Value of Ownership or Investment Interest:
