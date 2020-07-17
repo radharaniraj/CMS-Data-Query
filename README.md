@@ -35,7 +35,7 @@ You can download the database by following this [link](https://download.cms.gov/
 #### Physicians
  | Payments        | Given Value (Mentioned on website)           | Calculated Value  |
 | ------------- |:-------------:| -----:|
-| Number of Entities Receiving Payments     |615000 | 621495 |
+| Number of Entities Receiving Payments     |615000 | 614910 |
 |  General Payments Amounts     |   $2.30 Billion    |   2297477112|
 | Research Payments Amounts | $71.52 Million      | 71519076   |
 | Value of Ownership or Investment Interest| $1.24 Billion |   1240046612      |
@@ -43,15 +43,15 @@ You can download the database by following this [link](https://download.cms.gov/
 #### Teaching Hospitals
  | Payments        | Given Value (Mentioned on website)           | Calculated Value  |
 | ------------- |:-------------:| -----:|
-| Number of Entities Receiving Payments     | 1196 |1917  |
+| Number of Entities Receiving Payments     | 1196 |1196 |
 |  General Payments Amounts     | $1.27 Billion      |   1266119755 |
-| Research Payments Amounts |  $1.38 Billion     |   5157137662 |
+| Research Payments Amounts |  $1.38 Billion     |   $1.38 Billion |
 | Value of Ownership or Investment Interest| N/A |    NULL     |
 
 #### Companies
  | Payments        | Given Value (Mentioned on website)           | Calculated Value  |
 | ------------- |:-------------:| -----:|
-| Number of Entities Receiving Payments     |1602 |2341|
+| Number of Entities Receiving Payments     |1602 |1602|
 |  General Payments Amounts     | $3.56 Billion     |  3563596867 |
 | Research Payments Amounts | $5.23 Billion      |    5157137662 |
 | Value of Ownership or Investment Interest| $1.24 Billion |    1240046612     |

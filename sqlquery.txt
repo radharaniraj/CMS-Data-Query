@@ -33,20 +33,28 @@ Payments By Entities:
 
 Number of Entities:
 
-    Physicians Reciving Payments: Total will be: 621495
-    SELECT COUNT(Distinct Physician_Profile_ID) FROM gnrl;  ->613925
-    SELECT COUNT(Distinct Physician_Profile_ID) FROM ownrship;  ->2225
-    SELECT COUNT(Distinct Physician_Profile_ID) FROM reserc;    ->5345
+    Physicians Reciving Payments:
+     select count(distinct Physician_Profile_ID) from
+    (
+    SELECT  Physician_Profile_ID FROM gnrl WHERE Covered_Recipient_Type = 'Covered Recipient Physician' union all
+    SELECT  Physician_Profile_ID FROM ownrshp   union all
+    SELECT  Physician_Profile_ID FROM rsrch WHERE Covered_Recipient_Type = 'Covered Recipient Physician'
+    ) as Physician_Entities   ->614910
 
-    Teaching Hospital Reciving Payments: Total will be: 1917
-    SELECT COUNT(Distinct Teaching_Hospital_ID) FROM gnrl;  ->1173
-    SELECT COUNT(Distinct Teaching_Hospital_ID) FROM ownrship;  ->0
-    SELECT COUNT(Distinct Teaching_Hospital_ID) FROM reserc;    ->744
+    Companies Reciving Payments: 
+    select count (distinct Applicable_Manufacturer_or_Applicable_GPO_Making_Payment_ID) from
+    (
+    SELECT  Applicable_Manufacturer_or_Applicable_GPO_Making_Payment_ID FROM gnrl  union all
+    SELECT  Applicable_Manufacturer_or_Applicable_GPO_Making_Payment_ID FROM ownrshp union all
+    SELECT  Applicable_Manufacturer_or_Applicable_GPO_Making_Payment_ID FROM rsrch
+    ) as  Company_Entities    ->1602
 
-    Companies Reciving Payments: Total will be: 2341
-    SELECT COUNT(Distinct Applicable_Manufacturer_or_Applicable_GPO_Making_Payment_ID) FROM gnrl;  ->1541
-    SELECT COUNT(Distinct Applicable_Manufacturer_or_Applicable_GPO_Making_Payment_ID) FROM ownrship;  ->195
-    SELECT COUNT(Distinct Applicable_Manufacturer_or_Applicable_GPO_Making_Payment_ID) FROM reserc;    ->605
+    Teaching Hospital Reciving Payments: 
+    select count(distinct Teaching_Hospital_ID) from
+     (
+    SELECT Teaching_Hospital_ID FROM gnrl WHERE Covered_Recipient_Type = 'Covered Recipient Teaching Hospital' union all
+    SELECT Teaching_Hospital_ID FROM rsrch WHERE Covered_Recipient_Type = 'Covered Recipient Teaching Hospital'  
+    ) as Teaching_Hospital_Entities   ->1196
 
 General Payments:
 
