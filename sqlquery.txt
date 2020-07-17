@@ -58,7 +58,7 @@ Number of Entities:
 
 General Payments:
 
-    Physician Amount:  SELECT SUM(Total_Amount_of_Payment_USDollars) from gnrl WHERE WHERE Covered_Recipient_Type = 'Covered Recipient Physician' ;  -> 2297477112
+    Physician Amount:  SELECT SUM(Total_Amount_of_Payment_USDollars) from gnrl WHERE Covered_Recipient_Type = 'Covered Recipient Physician' ;  -> 2297477112
     Teaching Hospital Amount: SELECT SUM(Total_Amount_of_Payment_USDollars) from gnrl WHERE Covered_Recipient_Type = 'Covered Recipient Teaching Hospital';  -> 1266119755
     Companies Amount:SELECT SUM(Total_Amount_of_Payment_USDollars)  FROM gnrl;   ->3563596867
 

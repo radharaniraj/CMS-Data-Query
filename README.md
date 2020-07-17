@@ -46,7 +46,7 @@ You can download the database by following this [link](https://download.cms.gov/
 | Number of Entities Receiving Payments     | 1196 |1196 |
 |  General Payments Amounts     | $1.27 Billion      |   1266119755 |
 | Research Payments Amounts |  $1.38 Billion     |   $1.38 Billion |
-| Value of Ownership or Investment Interest| N/A |    NULL     |
+| Value of Ownership or Investment Interest| N/A |    N/A    |
 
 #### Companies
  | Payments        | Given Value (Mentioned on website)           | Calculated Value  |
